@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,24 +9,24 @@ function Navbar() {
         <div className="text-xl text-white font-semibold">Logo</div>
         {/* ------- medium device & upper links --------------- */}
         <div className="hidden md:flex md:items-center md:gap-5">
-          <a href="/#" className="text-white hover:text-yellow-500">
+          <Link to="/" className="text-white hover:text-yellow-500">
             Home
-          </a>
-          <a href="/#" className="text-white hover:text-yellow-500">
+          </Link>
+          <Link to="/about" className="text-white hover:text-yellow-500">
             About
-          </a>
-          <a href="/#" className="text-white hover:text-yellow-500">
+          </Link>
+          <Link to="/skills" className="text-white hover:text-yellow-500">
             Skills
-          </a>
-          <a href="/#" className="text-white hover:text-yellow-500">
+          </Link>
+          <Link to="/projects" className="text-white hover:text-yellow-500">
             Project
-          </a>
-          <a
-            href="/#"
+          </Link>
+          <Link
+            to="/contact"
             className="transition-all duration-200 bg-yellow-600 hover:bg-yellow-800 text-white px-3 py-1.5 rounded-sm"
           >
             Contact me
-          </a>
+          </Link>
         </div>
         {/* -------- menu icon ------------------------- */}
         {!isOpen && (
@@ -77,25 +78,25 @@ function Navbar() {
                   </svg>
                 </div>
                 <div className="my-5 flex flex-col gap-5">
-                  <a href="/#" className="text-center">
+                  <Link to="/" className="text-center">
                     Home
-                  </a>
-                  <a href="/#" className="text-center">
+                  </Link>
+                  <Link to="/about" className="text-center">
                     About
-                  </a>
-                  <a href="/#" className="text-center">
+                  </Link>
+                  <Link to="/skills" className="text-center">
                     Skills
-                  </a>
-                  <a href="/#" className="text-center">
+                  </Link>
+                  <Link to="/projects" className="text-center">
                     Project
-                  </a>
+                  </Link>
                   <div className="flex justify-center">
-                    <a
-                      href="/#"
+                    <Link
+                      to="/contact"
                       className="bg-red-500 text-white px-3 py-1.5 rounded-md"
                     >
                       Contact me
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
