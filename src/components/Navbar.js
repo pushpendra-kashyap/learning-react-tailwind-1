@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -53,9 +53,9 @@ function Navbar() {
         <div>
           <div
             id="container"
-            className="md:hidden fixed inset-0 h-screen bg-gray-500 bg-opacity-60 w-full"
+            className="md:hidden fixed inset-0 z-30  h-screen bg-gray-500 bg-opacity-60 w-full"
             onClick={(element) => {
-              if (element.target.id === "container") setIsOpen(false);
+              if (element.target.id === 'container') setIsOpen(false);
             }}
           >
             <div className="flex justify-end w-52 h-full bg-red-300 bg-opacity-50 ">
