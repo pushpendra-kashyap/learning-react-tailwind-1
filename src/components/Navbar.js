@@ -6,7 +6,7 @@ function Navbar() {
   return (
     <>
       <div className="h-20 bg-red-800 flex justify-between items-center px-10">
-        <div className="text-xl text-white font-semibold">Logo</div>
+        <div className="text-xl text-white font-semibold">Inflection ORG</div>
         {/* ------- medium device & upper links --------------- */}
         <div className="hidden md:flex md:items-center md:gap-5">
           <Link to="/" className="text-white hover:text-yellow-500">
