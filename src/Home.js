@@ -1,8 +1,12 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import BlogCard from './components/BlogCard';
 
 function Home() {
+  const navigate = useNavigate();
+  console.log(navigate);
+
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
@@ -49,6 +53,7 @@ function Home() {
                   title={blog.title}
                   description={blog.description}
                   image={blog.image.url}
+                  readBlog={() => navigate(`/${blog._id}`)}
                 />
               );
             })}
